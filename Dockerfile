@@ -20,6 +20,7 @@ RUN apk add --no-cache \
     nodejs npm 
 
 COPY package.json  .
+RUN npx npm-check-updates -u --reject joi,uuid
 RUN npm install 
 
 FROM alpine:latest
