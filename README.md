@@ -87,6 +87,8 @@ Install TimeOff.Management application within your infrastructure:
 ```bash
 git clone https://github.com/timeoff-management/application.git timeoff-management
 cd timeoff-management
+nvm install 14
+nvm use 14
 npm install
 npm start
 ```

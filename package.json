@@ -38,7 +38,7 @@
     "sequelize": "^3.19.2",
     "sequelize-cli": "2.5.1",
     "serve-favicon": "^2.1.7",
-    "sqlite3": "^4.0.1",
+    "sqlite3": "latest",
     "underscore": "^1.8.3",
     "uuid": "^3.3.2",
     "validator": "^3.43.0"
