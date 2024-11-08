@@ -13,23 +13,25 @@
     "connect-session-sequelize": "3.0.0",
     "cookie-parser": "^1.3.5",
     "csv": "~0.4.6",
-    "debug": "4.1.0",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.13.0",
     "formidable": "~1.0.17",
     "handlebars": "4.5.0",
     "html-to-text": "^3.2.0",
+    "i18n": "^0.15.1",
     "ical-generator": "^0.2.7",
     "joi": "~12.0.0",
     "ldapauth-fork": "^4.0.2",
     "moment": "^2.11.2",
     "moment-timezone": "^0.5.14",
     "morgan": "^1.3.2",
+    "mysql": "^2.18.1",
     "nconf": "^0.8.4",
     "node-uuid": "^1.4.7",
     "nodemailer": "^1.11.0",
     "nodemailer-smtp-transport": "^1.1.0",
+    "nodemon": "^2.0.20",
     "optimist": "^0.6.1",
     "passport": "^0.3.2",
     "passport-http-bearer": "^1.0.1",
@@ -37,21 +39,25 @@
     "redis": "^3.1.2",
     "sequelize": "^3.19.2",
     "sequelize-cli": "2.5.1",
-    "serve-favicon": "^2.1.7",
-    "sqlite3": "^4.0.1",
+    "serve-favicon": "^2.1.7",    
     "underscore": "^1.8.3",
     "uuid": "^3.3.2",
     "validator": "^3.43.0"
   },
   "devDependencies": {
+    "@mapbox/node-pre-gyp": "1.0.11",
     "chai": "^2.2.0",
+    "gulp": "^4.0.2",
     "mocha": "^6.2.2",
-    "node-sass": "^4.5.3",
+    "node-gyp": "^10.2.0",
+    "node-pre-gyp": "^0.17.0",
     "request-promise": "^4.2.2",
+    "sass": "^1.80.6",
     "selenium-webdriver": "2.53.3"
   },
   "scripts": {
     "test": "node node_modules/mocha/bin/mocha --recursive t",
+    "dev": "nodemon bin/wwww",
     "start": "node bin/wwww",
     "db-update": "node node_modules/.bin/sequelize db:migrate --config=config/db.json --models-path=lib/model/db/",
     "carry-over-allowance": "node bin/calculate_carry_over_allowance_for_all_users.js",
@@ -59,6 +65,6 @@
     "preinstall": "npx npm-force-resolutions"
   },
   "resolutions": {
-    "graceful-fs": "^4.2.4"
+    "graceful-fs": "^4.2.11"
   }
 }

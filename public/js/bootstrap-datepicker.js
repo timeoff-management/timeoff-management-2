@@ -1609,7 +1609,7 @@
 			return this;
 
 		if (this.length > 1)
-			throw new Error('Using only allowed for the collection of a single element (' + option + ' function)');
+			throw new Error('Usando permitido apenas para a coleção de um único elemento (' + option + ' function)');
 		else
 			return internal_return;
 	};
@@ -1630,7 +1630,7 @@
 		forceParse: true,
 		format: 'mm/dd/yyyy',
 		keyboardNavigation: true,
-		language: 'en',
+		language: 'pt',
 		minViewMode: 0,
 		maxViewMode: 2,
 		multidate: false,
@@ -1666,7 +1666,17 @@
 			today: "Today",
 			clear: "Clear",
 			titleFormat: "MM yyyy"
-		}
+		},
+		pt: {
+			days: ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"],
+			daysShort: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],
+			daysMin: ["Do", "Se", "Te", "Qa", "Qi", "Sx", "Sa"],
+			months: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
+			monthsShort: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+			today: "Hoje",
+			clear: "Limpar",
+			titleFormat: "MM yyyy"
+		},		
 	};
 
 	var DPGlobal = {

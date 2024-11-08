@@ -1,7 +1,7 @@
 
 {{> header }}
 
-<h1>{{employee.name}} {{employee.lastname}}'s details {{#with employee }}{{#unless this.is_active}}<span class="badge alert-warning">Deactivated</span>{{/unless}}{{/with}}</h1>
+<h1 class="titulo-h1">{{employee.name}} {{employee.lastname}}'s details {{#with employee }}{{#unless this.is_active}}<span class="badge alert-warning">Deactivated</span>{{/unless}}{{/with}}</h1>
 
 <div class="row">
     <div class="col-md-3 lead">Employee details</div>

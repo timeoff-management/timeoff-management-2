@@ -4,9 +4,12 @@ node_js:
 sudo: false
 addons:
     chrome: stable
+install:
+  - npm ci    
 cache:
   directories:
     - node_modules
+    - "$HOME/.npm"
 env:
 #  - USE_CHROME=1
 before_install:

@@ -1,7 +1,7 @@
 
 {{> header }}
 
-<h1>Staff</h1>
+<h1 class="titulo-h1">Staff</h1>
 
 {{> show_flash_messages }}
 
@@ -14,9 +14,10 @@
         <span class="caret"></span>
         <span class="sr-only">Toggle Dropdown</span>
       </button>
-      <ul class="dropdown-menu">
-        <li><a href="/users/import/" id="import_users_btn">Import employees</a></li>
+      <ul class="dropdown-menu">        
         <li><a href="/users/add/" id="add_new_department">Add single employee</a></li>
+        <li role="separator" class="divider hidden-xs"></li>
+        <li><a href="/users/import/" id="import_users_btn">Import employees</a></li>      
       </ul>
     </div>
     <form action="/users/" method="GET">

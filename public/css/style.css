@@ -1,14 +1,27 @@
+@font-face {font-family: "Calibri";
+  src: url("/fonts/calibri.eot"); /* IE9*/
+  src: url("/fonts/calibri.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/calibri.woff2") format("woff2"), /* chrome firefox */
+  url("/fonts/calibri.woff") format("woff"), /* chrome firefox */
+  url("/fonts/calibri.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+  url("http://db.onlinewebfonts.com/t/a78cfad3beb089a6ce86d4e280fa270b.svg#Calibri") format("svg"); /* iOS 4.1- */
+}
+
+@font-face{font-family:calibri light;font-style:normal;font-weight:300;src:local('Calibri Light'),url(/fonts/calibril.woff) format('woff')}
+
 /*
   SYNOPSIS:
     (from witin project rooot directory)
       sassc scss/main.scss public/css/style.css
 */
 body {
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
-  color: #61686b; }
+  font: 14px Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;
+  color: #61686b; 
+}
 
 a {
-  color: #5ba4e5; }
+  color: #2896FD; 
+}
 
 /*
   Simple class that makes its content's font size little bit bigger
@@ -61,43 +74,69 @@ label.label-plain {
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
+  padding-top: 19px;
   padding-bottom: 19px;
   margin-top: 0;
   margin-bottom: 0;
-  line-height: 40px; }
+  line-height: 40px; 
+}
 
 /* Custom page footer */
 .footer {
   margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #e5e5e5; }
+  padding: 20px;
+  border: 1px solid #000828; 
+  background-color: #000828;
+  height: 55px;
+  border-radius: 5px;
+}
 
 .header, .marketing, .footer {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0; 
+}
+
+.footer {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 /* Space out the masthead */
 .header {
-  margin-bottom: 30px; }
+  /*
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  */
+  margin-bottom: 30px;     
+}
 
 .popover {
   min-width: 300px; }
 
 /* styling calendar*/
 .calendar_month {
-  width: 100%; }
+  width: 100%; 
+  border-radius: 10px;  
+  border: 1px solid #000828; 
+  min-height: 233px;
+}
 
 .calendar_month td {
   text-align: center;
   padding-top: 5px;
-  padding-bottom: 5px; }
+  padding-bottom: 5px; 
+}
 
 .calendar_month thead {
   text-align: center;
-  font-weight: bolder; }
+  font-weight: bolder;  
+}
 
 div.month_container {
-  height: 250px; }
+  height: 250px; 
+}
 
 .team-view-table {
   width: 100%; }
@@ -128,15 +167,21 @@ td.calendar_cell span {
   z-index: 10; }
 
 td.current_day_cell {
-  background: #FFCDD2;
-  color: #ffffff; }
+  background: orange;
+  color: #ffffff; 
+  /*border-radius: 4px;*/
+}
 
 td.weekend_cell {
-  background: #F5F7F8; }
+  background: #B0B0B0;
+  color: #ffffff;     
+}
 
 td.bank_holiday_cell {
   background: #31B0D5;
-  color: #ffffff; }
+  color: #ffffff; 
+  /*border-radius: 4px;*/
+}
 
 td.leave_cell {
   background: #9fbb58;
@@ -215,7 +260,8 @@ div.feeds-holder {
 
 .calendar-section-caption {
   text-align: center;
-  font-size: 1.2em; }
+  font-size: 1.2em; 
+}
 
 .setting-general-2nd-column {
   padding-left: 30px; }
@@ -247,3 +293,29 @@ div.feeds-holder {
 
 .leave_type_color_5 {
   background: #00BCD4 !important; }
+
+.logo {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+}
+
+.titulo-h1 {
+  padding-top: 25px;
+  padding-bottom: 19px;
+  font-family: Calibri;
+  font-weight: bolder;
+  font-size: 36px;
+}
+
+.calendar_month_title {
+  background-color: #000828;
+  color:white;
+}
+
+.calendar_month_weeks {
+  font-weight: bolder;
+}

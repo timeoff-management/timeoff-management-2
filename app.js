@@ -6,7 +6,36 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var moment       = require('moment');
+
 const createSessionMiddleware = require('./lib/middleware/withSession');
+
+moment.locale('en');
+
+/*https://github.com/mashpie/i18n-node*/
+/* i18n as Singleton */
+//const i18n = require('i18n');
+/* configure shared state */
+/*
+i18n.configure({
+  locales: ['en', 'pt'],
+  directory: path.join(__dirname, '/locales'),
+  // setting of log level DEBUG - default to require('debug')('i18n:debug')
+  logDebugFn: function (msg) {
+    console.log('debug', msg);
+  },
+
+  // setting of log level WARN - default to require('debug')('i18n:warn')
+  logWarnFn: function (msg) {
+    console.log('warn', msg);
+  },
+
+  // setting of log level ERROR - default to require('debug')('i18n:error')
+  logErrorFn: function (msg) {
+    console.log('error', msg);
+  }  
+});
+*/
+/* i18n usage "i18n.__('Hello')" */
 
 var app = express();
 
@@ -20,6 +49,9 @@ var handlebars = require('express-handlebars')
 
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
+
+// default: using 'accept-language' header to guess language settings
+/*app.use(i18n.init);*/
 
 // Add single reference to the model into application object
 // and reuse it whenever an access to DB is needed

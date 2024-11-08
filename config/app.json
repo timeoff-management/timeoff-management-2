@@ -1,7 +1,7 @@
 {
   "allow_create_new_accounts" : true,
-  "send_emails"              : false,
-  "application_sender_email" : "email@test.com",
+  "send_emails"               : false,  
+  "application_sender_email" : "example@example.com",
   "email_transporter" : {
     "host" : "localhost",
     "port" : 25,
@@ -17,6 +17,11 @@
       "port": 6379
     }
   },
+  "azure-aad" : {
+    "AZURE_TENANT_ID": "<azure tenant id>",
+    "AZURE_CLIENT_ID": "<azure client id>",
+    "AZURE_CLIENT_SECRET": "<azure client secret>"
+  },  
   "ga_analytics_on" : false,
   "crypto_secret" : "!2~`HswpPPLa22+=±§sdq qwe,appp qwwokDF_",
   "application_domain" : "http://app.timeoff.management",

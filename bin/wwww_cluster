@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var debug = require('debug')('vacation-tracker');
+//var debug = require('debug')('vacation-tracker');
 var app   = require('../app');
 
 var cluster = require('cluster');

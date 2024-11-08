@@ -1,0 +1,23 @@
+{
+    "Hello": "Olá",
+    "Hello %s, how are you today?": "Olá %s, como estás hoje?",
+    "weekend": "fim-de-semana",
+    "Hello %s, how are you today? How was your %s.": "Olá %s,Como estás hoje? Como estava %s.",
+    "Hi": "Olá",
+    "Howdy": "Howdy",
+    "%s cat": {
+      "one": "%s gato",
+      "other": "%s gatos"
+    },
+    "There is one monkey in the %%s": {
+      "one": "There is one monkey in the %%s",
+      "other": "There are %d monkeys in the %%s"
+    },
+    "tree": "tree",
+    "%s dog": {
+      "one": "one dog",
+      "other": "[0] no dog|[2,5] some dogs|[6,11] many dogs|[12,36] dozens of dogs|a horde of %s dogs"
+    },
+    "label-employee-email": "Utilizador",
+    "label-employee-password": "Senha"
+}

@@ -18,7 +18,7 @@ $leave_cell_font_color : #61686b;
 // 5E5E5E
 
 body {
-  font: $font-size-primary "Open Sans", Helvetica, Arial, sans-serif;
+  font: $font-size-primary Calibri;
   color: $primary-font-color;
 }
 
@@ -95,6 +95,11 @@ label.label-plain {
   line-height: 40px;
 }
 
+.titulo-h1 {
+  padding-top: 25px;
+  padding-bottom: 19px;
+}
+
 /* Custom page footer */
 
 .footer {
@@ -133,7 +138,6 @@ label.label-plain {
  font-weight: bolder;
 }
 
-
 div.month_container {
     height : 250px;
 }
@@ -169,14 +173,14 @@ td.calendar_cell span {
     z-index : 10;
 }
 td.current_day_cell {
-  background: #FFCDD2;
+  background: orange;
   color : #ffffff;
 }
 td.weekend_cell {
-  background: $selected-item-background;
+  background: $leave_cell_font_color; //$selected-item-background;
 }
 td.bank_holiday_cell {
-    background : #31B0D5;
+    background : red;
     color : #ffffff;
 }
 td.leave_cell {
@@ -309,4 +313,32 @@ div.feeds-holder {
 
 .leave_type_color_5 {
   background: #00BCD4 !important;
+}
+
+.logo {
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.current_day_cell {
+  background: orange;
+  color : #ffffff;
+}
+
+.weekend_cell {
+  background: $leave_cell_font_color;
+  color : #ffffff;
+}
+
+.calendar_month_title {
+  background-color: #000828;
+  color:white;
+}
+
+.calendar_month_weeks {
+  font-weight: bolder;
 }

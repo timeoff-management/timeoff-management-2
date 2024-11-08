@@ -1,7 +1,7 @@
 
 {{> header }}
 
-<h1>Employee calendar</h1>
+<h1 class="titulo-h1">Employee calendar</h1>
 
 <div class="row">
     <div class="col-md-6 lead">{{logged_user.name}} {{logged_user.lastname}}'s calendar for {{current_year}}</div>
@@ -23,9 +23,10 @@
     <dl>
       {{#with current_user }}
       <dt data-tom-days-available-in-allowance>{{ ../user_allowance.number_of_days_available_in_allowance }}</dt>
-      <dd>Days available</dd>
-      <dd>out of <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in allowance</dd>
+      <dd style="text-align:center;font-weight: 700;">Days available</dd>
+      <dd style="text-align:center">out of <span data-tom-total-days-in-allowance>{{ ../user_allowance.total_number_of_days_in_allowance }}</span> in allowance</dd>
       {{/with}}
+      <dd style="text-align:left"><br><em>Holidays in {{current_year}}:</em><span class="pull-right"> {{ user_allowance.total_number_of_days_in_allowance }} days</span><dd></dd>
     </dl>
   </div>
 
@@ -70,6 +71,13 @@
 
 <div class="row main-row_header">
   <div class="col-md-12">Calendar <a href="/calendar/feeds/" data-toggle="tooltip" data-placement="right" title="Export absences  to external calendars"><span class="fa fa-rss"></span></a></div>
+  <div style="padding-left:13px;">
+    {{# unless show_full_year}}
+    <a class="btn btn-default" href="/calendar/?show_full_year=1">Expand Calendar &nbsp;<span class="fa fa-expand"></span></a>
+    {{else}}
+    <a class="btn btn-default" href="/calendar/">Contract Calendar &nbsp;<span class="fa fa-compress"></span></a>
+    {{/unless}}  
+  </div>
 </div>
 
 <div class="row">
@@ -82,13 +90,6 @@
 
     <strong>{{#if show_full_year}}January - December {{current_year}}{{else}}Upcoming Months{{/if}}</strong>
     &nbsp;
-
-    {{# unless show_full_year}}
-    <a class="btn btn-default" href="/calendar/?show_full_year=1">More... &nbsp;<span class="fa fa-plus"></span></a>
-    {{else}}
-    <a class="btn btn-default" href="/calendar/">Less... &nbsp;<span class="fa fa-minus"></span></a>
-    {{/unless}}
-
 
   </div>
   <div class="col-xs-2">
@@ -106,10 +107,10 @@
     <div class="col-md-3 month_container">
         <table class="calendar_month month_{{ this.month }}">
         <thead>
-        <tr>
+        <tr class="calendar_month_title">
             <td colspan="14">{{#if ../show_full_year}}{{this.month}}{{else}}{{as_date_formatted this.moment 'MMMM, YYYY'}}{{/if}}</td>
         </tr>
-        <tr>
+        <tr class="calendar_month_weeks">
             <td colspan="2">M</td>
             <td colspan="2">T</td>
             <td colspan="2">W</td>

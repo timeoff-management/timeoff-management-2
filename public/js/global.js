@@ -53,7 +53,51 @@ $(document).ready(function(){
     clear       : "Clear",
     weekStart   : 1,
     format      : "dd/mm/yyyy"
-  }
+  };
+  a.fn.datepicker.dates["pt-PT"] = {
+    days : [
+      "Domingo", "Segunda", "Ter�a", "Quarta", "Quinta", "Sexta", "S�bado"
+    ],
+    daysShort : [
+      "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"
+    ],
+    daysMin : [
+      "Do", "Se", "Te", "Qa", "Qi", "Sx", "Sa"
+    ],
+    months : [
+      "Janeiro", "Fevereiro", "Mar�o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ],
+    monthsShort : [
+      "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+    ],
+    today       : "Hoje",
+    monthsTitle : "Meses",
+    clear       : "Limpar",
+    weekStart   : 1,
+    format      : "dd/mm/yyyy"
+  };
+  a.fn.datepicker.dates["pt-BR"] = {
+    days : [
+      "Domingo", "Segunda", "Ter�a", "Quarta", "Quinta", "Sexta", "S�bado"
+    ],
+    daysShort : [
+      "Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"
+    ],
+    daysMin : [
+      "Do", "Se", "Te", "Qa", "Qi", "Sx", "Sa"
+    ],
+    months : [
+      "Janeiro", "Fevereiro", "Mar�o", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ],
+    monthsShort : [
+      "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"
+    ],
+    today       : "Hoje",
+    monthsTitle : "Meses",
+    clear       : "Limpar",
+    weekStart   : 1,
+    format      : "dd/mm/yyyy"
+  };  
 }(jQuery);
 
 $(function () {
@@ -116,7 +160,7 @@ function getUrlVars(url){
 $(document).ready(function(){
 
   $('#team_view_month_select_btn')
-    .datepicker()
+    .datepicker({ language: 'en-US'})
     .on('changeDate', function(e) {
       var url = $(e.currentTarget).data('tom');
 
@@ -280,19 +324,10 @@ $(document).ready(function() {
  */
  $(document).ready(function(){
   $('.single-click').on('click', function(e) {
-    var form = $(e.target).closest('form');
-
-    // Ensure "required" fields are populated
-    var formIsValid = true;
-    $(form).find('[required]').each(function(el){formIsValid = formIsValid && !! el.val()});
-    if (formIsValid) {
-      e.stopPropagation();
-    } else {
-      return;
-    }
+    e.stopPropagation();
 
     $(e.target).prop('disabled', true);
-
+    var form = $(e.target).closest('form');
     var submitName = $(e.target).attr('name');
     if (submitName !== undefined) {
       $('<input>').attr({type: 'hidden', name: submitName, value: '1'}).appendTo(form);
@@ -302,3 +337,4 @@ $(document).ready(function() {
     return false;
   });
 });
+

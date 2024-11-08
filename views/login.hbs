@@ -1,40 +1,111 @@
+<style>
+  body {
+    padding-top: 0px;
+    padding-bottom: 0px;;    
+  }
+  .container {
+    height:100vh;width:100%; right: 100vh; margin-left: 0; margin-top: 0px; padding: 0px;    
+    background: url(/img/fundo-login.svg); background-repeat: no-repeat; background-size: cover;
+  }
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    width: calc(100% - 60px);    
+  }
+  .login-box {
+    margin: 0 auto; 
+    margin-top: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    height: 450px;
+    background: linear-gradient(180deg, #7DC7E0 0%, rgba(30, 49, 86, 0.2) 100%);
+    backdrop-filter: blur(2.5px);
+    border-radius: 21px;
+    width:350px;    
+    left:calc(100% - 60%);    
+    padding: 20px;
+    padding-top: 40px;    
+    text-align: center;
+  }
+  input::placeholder { 
+    color: black;
+    opacity: 1;
+  }
+
+  @media only screen and (orientation: portrait) and (max-width: 770px) {
+    .login-box {
+      width:350px;    
+      left:calc(100% - 73%);
+    }
+  }
+  @media only screen and (orientation: portrait) and (max-width: 500px) {
+    .login-box {
+      width:350px;    
+      left:calc(100% - 95%);
+    }
+  }
+  @media only screen and (orientation: portrait) and (max-width: 400px) {
+    .login-box {
+      width:350px;    
+      left:calc(100% - 95%);
+    }
+  }
+
+</style>
+
+<div style="padding: 30px;">
 
 {{> header }}
 
-<h1>Login</h1>
-
 {{> show_flash_messages }}
 
-<form class="form-horizontal" action="/login" method="post">
+<div class="login-box">
+    
+  <img src="/img/circle-user-regular.svg" style="width: 89px; height: 89px;">
 
-  <div class="row">&nbsp;</div>
+  <h1 class="titulo-h1" style="color:white;padding-top: unset;padding-bottom: unset;font-weight: 700; font-size: 36px;">{{{ titulo }}}</h1>
 
-  <div class="form-group">
-    <label for="email_inp" class="col-md-2 control-label col-md-offset-2">Employee email:</label>
-    <div class="col-md-5">
-      <input class="form-control" id="email_inp" type="text" name="username" required>
+  <form class="form-horizontal" action="/login" method="post">
+
+    <div class="row">&nbsp;</div>
+    {{log "info logging" level="info"}}
+    
+    <div class="formulario-fields" style="margin: auto;display: table;">
+
+    <div class="form-group">      
+      <div class="col-md-5">
+        <input class="form-control" id="email_inp" type="text" name="username" placeholder="{{{ labelUtilizador }}}" style="width: 278px;color:black;" required>
+      </div>
     </div>
-  </div>
 
-  <div class="form-group">
-    <label for="pass_inp" class="col-md-2 control-label col-md-offset-2">Password</label>
-    <div class="col-md-5">
-      <input class="form-control" id="pass_inp" type="password" name="password" required>
-    </div>
-  </div>
+    <div class="form-group">      
+      <div class="col-md-5">
+        <input class="form-control" id="pass_inp" type="password" name="password" placeholder="{{{ labelSenha }}}" style="width: 278px;color:black;" required>
+      </div>
+    </div>   
 
-  <div class="form-group">
-    <div class="col-md-offset-4 col-md-1">
-      <button type="submit" class="btn btn-success single-click" id="submit_login">Login</button>
+    <div class="form-group">
+      <div class="col-md-1">
+        <button type="submit" class="btn btn-primary single-click" id="submit_login" style="width: 278px;color:white;">Login</button>
+      </div>
     </div>
-    <div class="col-md-4">
-      <p class="pull-right"><a href="/forgot-password/">Forgot password?</a>{{#if allow_create_new_accounts }} | <a href="/register/">Register new company</a>{{/if}}</p>
-    </div>
-  </div>
 
-</form>
+    <div class="form-group">
+      <div class="col-md-2" style="width: 100%;text-align: center;">
+        <p class="pull-right"><a href="/forgot-password/">Forgot Password?</a>{{#if allow_create_new_accounts }} | <a href="/register/">Register New Company</a>{{/if}}</p>
+      </div>      
+    </div>
+
+    </div>
+
+  </form> 
+
+</div>  
 
 <div class="row">&nbsp;</div>
 
 
 {{> footer }}
+
+</div>
+

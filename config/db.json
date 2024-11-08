@@ -1,5 +1,5 @@
 {
-  "development": {
+  "devlite": {
     "dialect": "sqlite",
     "storage": "./db.development.sqlite",
     "logging": false 
@@ -11,11 +11,25 @@
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
+  "development": {
+    "username": "avmMyDatabaseUser",
+    "password": "As6pernasdabaratasaoverdes",
+    "database": "timeoffdb",
+    "host": "avm-my-database.mysql.database.azure.com",
+    "dialect": "mysql"
+  },
   "production": {
     "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
+  },
+  "localmysql": {
+    "username": "timeoff",
+    "password": "timeoff",
+    "database": "timeoffdb",
+    "host": "192.168.0.1",
+    "dialect": "mysql"   
   }
 }
