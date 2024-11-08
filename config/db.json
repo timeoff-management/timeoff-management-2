@@ -12,10 +12,10 @@
     "dialect": "mysql"
   },
   "development": {
-    "username": "avmMyDatabaseUser",
-    "password": "As6pernasdabaratasaoverdes",
-    "database": "timeoffdb",
-    "host": "avm-my-database.mysql.database.azure.com",
+    "username": "your-username",
+    "password": "your-password",
+    "database": "yourdb",
+    "host": "your-mysql-host",
     "dialect": "mysql"
   },
   "production": {
