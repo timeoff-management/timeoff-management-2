@@ -41,7 +41,7 @@
     "sqlite3": "^4.0.1",
     "underscore": "^1.8.3",
     "uuid": "^3.3.2",
-    "validator": "^3.43.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "chai": "^2.2.0",
