@@ -18,7 +18,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.13.0",
     "formidable": "~1.0.17",
-    "handlebars": "4.5.0",
+    "handlebars": "4.7.7",
     "html-to-text": "^3.2.0",
     "ical-generator": "^0.2.7",
     "joi": "~12.0.0",
